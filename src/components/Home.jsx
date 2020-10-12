@@ -4,11 +4,12 @@ import { useHistory } from "react-router-dom";
 function Home(props) {
   console.log(props);
 
-  // history from Hook is the same as props.history. You may use either, but you must use the hook when you don't have access to the react router props.
+  // history from Hook is the same as props.history.
+  // You may use either, but you must use the hook when you don't have access to the react router props.
   const history = useHistory();
   console.log(history);
   const routeToShop = () => {
-    history.push("/shop");
+    history.push("/pizza");
   };
   return (
     <div className="home-wrapper">
@@ -18,7 +19,7 @@ function Home(props) {
         alt=""
       />
       <button className="md-button shop-button" onClick={routeToShop}>
-        Shop now!
+        EET - NOW!
       </button>
     </div>
   );

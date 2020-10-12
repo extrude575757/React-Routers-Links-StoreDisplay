@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import Heading from "./components/Heading";
+import Thankyou from "./components/Thankyou"
 import { BrowserRouter as Router } from "react-router-dom";
 
 const rootElement = document.getElementById("root");
@@ -10,8 +12,13 @@ const rootElement = document.getElementById("root");
 
 // Router is an alias for BrowserRouter : https://reacttraining.com/react-router/web/api/BrowserRouter
 ReactDOM.render(
+  <>
   <Router>
     <App />
-  </Router>,
+    <Heading />  
+  </Router>
+  
+ </>
+  ,
   rootElement
 );
