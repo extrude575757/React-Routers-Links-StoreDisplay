@@ -15,9 +15,11 @@ ReactDOM.render(
   <>
   <Router>
     <App />
-    <Heading />  
+    
   </Router>
-  
+  <Router>
+  <Heading />  
+  </Router>
  </>
   ,
   rootElement

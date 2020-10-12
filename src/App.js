@@ -31,7 +31,7 @@ export default function App() {
           <Route path="/pizza">
             <Form />
           </Route>
-          <Route path="/pizza/:order">
+          <Route path="/thankyou">
             <Thankyou />
           </Route>
         <Route path="/shop/:itemId/valueterm/:moreInfo">

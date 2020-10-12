@@ -25,9 +25,9 @@ const Form = (props) =>{
         // e.preventDefault();
 
         if(sub === false){
-            e.preventDefault();
+            // e.preventDefault();
             setSub(true);
-        axios.post(`${path}/pizza`,order)
+        axios.post(`/thankyou`,order)
         .then(evn =>{
             // debugger;
             console.log('ev')
@@ -52,7 +52,7 @@ const Form = (props) =>{
     return (
         sub
         ?
-        <Route history={props.history}  path={`${path}pizza/:ordered`} render={(props) => <Ordered order={order} />} />
+        <Route  history={props.history} path={`${path}/thankyou/:order`} render={(props) => <Ordered order={order} />} />
                 :
         <div className="App">
             <label htmlFor={"oForm"}>Lambda EEtz: Order Form</label>
@@ -74,10 +74,12 @@ const Form = (props) =>{
                 <label htmlFor="sardines">Sardines</label>
                 <input type="checkbox" name="sardines" />
                 <label htmlFor="order">Order Now</label>
-                <Link to={`${url}/Thankyou`} >
+                
+                <Link to={`/thankyou`} >
                     
-                <Fbtn />
-                </Link>
+                    <Fbtn />
+                    </Link>
+                
                
             </form>
             
